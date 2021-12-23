@@ -1,6 +1,6 @@
 {
   "name": "@nikifilini/codestyle",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "main": "src/index.js",
   "repository": "https://github.com/NikiFilini-Dev/codestyle",
   "author": "lunavod",
@@ -8,12 +8,14 @@
   "scripts": {
     "lint": "eslint . --fix",
     "pretty": "prettier . --write",
-    "postinstall": "node postinstall.js"
+    "postinstall": "node postinstall.js",
+    "releaser": "releaser"
   },
   "dependencies": {
     "lodash.mergewith": "^4.6.2"
   },
   "devDependencies": {
+    "@lunavod/releaser": "^1.0.0",
     "@trivago/prettier-plugin-sort-imports": "^2.0.4",
     "@typescript-eslint/eslint-plugin": "^5.8.0",
     "@typescript-eslint/parser": "^5.8.0",
@@ -27,13 +29,10 @@
     "typescript": "^4.5.4"
   },
   "peerDependencies": {
+    "@trivago/prettier-plugin-sort-imports": "^2.0.4",
     "@types/eslint": "^7.2.8",
     "@types/eslint-config-prettier": "^6.11.0",
     "@types/eslint-plugin-prettier": "^3.1.0",
-    "eslint-plugin-promise": "^4.2.1",
-    "eslint-plugin-react": "^7.21.5",
-    "prettier": "2.5.1",
-    "@trivago/prettier-plugin-sort-imports": "^2.0.4",
     "@typescript-eslint/eslint-plugin": "^5.8.0",
     "@typescript-eslint/parser": "^5.8.0",
     "babel-eslint": "^10.1.0",
@@ -42,6 +41,9 @@
     "eslint-plugin-babel": "^5.3.1",
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-react": "^7.21.5",
+    "prettier": "2.5.1",
     "typescript": "^4.5.4"
   }
 }
