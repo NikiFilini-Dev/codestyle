@@ -5,10 +5,10 @@
   "repository": "https://github.com/NikiFilini-Dev/codestyle",
   "author": "lunavod",
   "license": "MIT",
-  "private": false,
   "scripts": {
     "lint": "eslint . --fix",
-    "pretty": "prettier . --write"
+    "pretty": "prettier . --write",
+    "postinstall": "node postinstall.js"
   },
   "dependencies": {
     "lodash.mergewith": "^4.6.2"
