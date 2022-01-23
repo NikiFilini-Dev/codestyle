@@ -10,5 +10,10 @@ module.exports = {
     '~\\/api',
   ],
   importOrderSeparation: true,
-  experimentalBabelParserPluginsList: ['jsx', 'typescript'],
+  importOrderParserPlugins: [
+    'jsx',
+    'typescript',
+    'classProperties',
+    'decorators-legacy',
+  ],
 }
