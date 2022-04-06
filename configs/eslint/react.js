@@ -5,7 +5,7 @@ const reactConfig = {
   env: {
     browser: true,
   },
-  extends: ['plugin:react/recommended', 'prettier/react'],
+  extends: ['plugin:react/recommended', 'prettier'],
   parserOptions: {
     ecmaFeatures: {
       jsx: true,
