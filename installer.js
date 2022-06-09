@@ -41,7 +41,22 @@ const main = async () => {
         return answers.eslint
       },
     },
+    {
+      type: 'confirm',
+      name: 'scripts',
+      message: 'Add format and lint scripts to package.json?',
+    },
   ])
+
+  if (answers.scripts) {
+    if (!('scripts' in targetPackageJson)) targetPackageJson.scripts = {}
+    targetPackageJson.scripts.format = 'prettier src --write'
+    targetPackageJson.scripts.lint = 'eslint src --fix'
+    await fs.writeJSON(
+      path.join(process.cwd(), 'package.json'),
+      targetPackageJson,
+    )
+  }
 
   if (answers.prettier) {
     await fs.writeFileSync(
